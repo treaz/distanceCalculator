@@ -31,26 +31,8 @@ class DistanceConverterTest {
     }
 
     @Test
-    void toMeters_nullUnit() {
-        var distance = new Distance(111, null);
-
-        var actual = DistanceConverter.toMeters(distance);
-
-        assertEquals(111, actual.getValue());
-    }
-
-    @Test
     void toMeters_convertDoubleMAX() {
         var distance = new Distance(Double.MAX_VALUE, Unit.YARDS);
-
-        var actual = DistanceConverter.toMeters(distance);
-
-        assertEquals(Double.MAX_VALUE / 1.0936, actual.getValue(), 0.009);
-    }
-
-    @Test
-    void toMeters_convertDoubleMIN() {
-        var distance = new Distance(Double.MIN_VALUE, Unit.YARDS);
 
         var actual = DistanceConverter.toMeters(distance);
 

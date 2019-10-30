@@ -12,7 +12,6 @@ class DistanceConverter {
 
     /**
      * Convers distance expressed in yards to meters
-     * @param distance when unit is unknown, defaults to meters
      * @return a distance measured in meters
      */
     Distance toMeters(@NonNull Distance distance){
