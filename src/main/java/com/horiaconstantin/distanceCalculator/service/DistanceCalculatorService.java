@@ -4,7 +4,7 @@ import lombok.NonNull;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DistanceCalculator {
+public class DistanceCalculatorService {
 
     public Distance calculateSum(@NonNull Distance d1, @NonNull Distance d2, @NonNull Unit resultUnit) {
         Distance result;

@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class DistanceConverterTest {
-    private static final double PRECISION = 1e-2;
+    public static final double PRECISION = 1e-2;
 
     @Test
     void toMeters_nullNotAllowed() {

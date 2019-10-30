@@ -1,7 +1,7 @@
 package com.horiaconstantin.distanceCalculator.web;
 
 import com.horiaconstantin.distanceCalculator.service.Distance;
-import com.horiaconstantin.distanceCalculator.service.DistanceCalculator;
+import com.horiaconstantin.distanceCalculator.service.DistanceCalculatorService;
 import com.horiaconstantin.distanceCalculator.service.Unit;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class CalculatorController {
 
-    private final DistanceCalculator calculator;
+    private final DistanceCalculatorService calculator;
 
-    public CalculatorController(DistanceCalculator calculator) {
+    public CalculatorController(DistanceCalculatorService calculator) {
         this.calculator = calculator;
     }
 
@@ -26,12 +26,12 @@ public class CalculatorController {
             @RequestParam(value = "distance2Unit") Unit d2unit,
             @RequestParam(value = "resultUnit") Unit resultUnit) {
 //        TODO use a wrapper object
-
+//TODO the controller should not know of the Distance object
         return calculator.calculateSum(new Distance(d1, d1unit), new Distance(d2, d2unit), resultUnit);
     }
 
     @InitBinder
-    public void initBinder(final WebDataBinder webdataBinder) {
+    private void initBinder(final WebDataBinder webdataBinder) {
         webdataBinder.registerCustomEditor(Unit.class, new UnitConverter());
     }
 }
