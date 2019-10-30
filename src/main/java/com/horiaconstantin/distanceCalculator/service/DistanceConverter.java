@@ -5,8 +5,8 @@ import lombok.experimental.UtilityClass;
 
 /**
  * Class that converts yards to meters and meters to yards.
- * The current implementation offers precision up to 2 decimals.
- * NOTE: The implementation uses double, therefore it's going to imprecise at big distance values
+ * The current implementation offers precision of 1e-2
+ * NOTE: The implementation uses double, therefore it's going to be imprecise at big distance values
  */
 @UtilityClass
 class DistanceConverter {
