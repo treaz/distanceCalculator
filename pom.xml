@@ -9,12 +9,13 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.horiaconstantin</groupId>
-	<artifactId>distanceConverter</artifactId>
+	<artifactId>distanceCalculator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>distanceConverter</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>13</java.version>
 	</properties>
 
