@@ -1,4 +1,4 @@
-package com.horiaconstantin.distanceConverter;
+package com.horiaconstantin.distanceCalculator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

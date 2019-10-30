@@ -1,4 +1,4 @@
-package com.horiaconstantin.distanceConverter.service;
+package com.horiaconstantin.distanceCalculator.service;
 
 import lombok.Value;
 

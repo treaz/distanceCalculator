@@ -1,4 +1,4 @@
-package com.horiaconstantin.distanceConverter;
+package com.horiaconstantin.distanceCalculator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
