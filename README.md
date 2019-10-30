@@ -1,5 +1,10 @@
 # distanceConverter
 
+#Running
+1. Compile `mvn package`
+1. Run `mvn spring-boot:run`
+1. Open http://localhost:8080/input.html
+
 ## Steps to solution
 1. Create spring boot project
 2. Implement distance converting logic
