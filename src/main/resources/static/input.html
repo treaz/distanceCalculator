@@ -6,19 +6,26 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Distance calculator</title>
+    <style>
+        .hidden{
+        display:none;
+        }
+
+
+    </style>
 </head>
 <body>
-
-<form>
+<div>
+    <form id="distanceInputFormId" method="post">
     <label for="distance1Value">Distance1 value</label><br>
-    <input name="distance1Value" type="number" required/><br>
+        <input name="distance1Value" type="number" value="10" required step="0.001"/><br>
     <label for="distance1Unit">Distance1 measurement unit</label><br>
     <select name="distance1Unit">
         <option value="meters" selected>meters</option>
         <option value="yards">yards</option>
     </select><br>
     <label for="distance2Value">Distance2 value</label><br>
-    <input name="distance2Value" type="number" required/><br>
+        <input name="distance2Value" type="number" value="10" required step="0.001"/><br>
     <label for="distance2Unit">Distance2 measurement unit</label><br>
     <select name="distance2Unit">
         <option value="meters" selected>meters</option>
@@ -31,6 +38,11 @@
     </select><br>
     <input value="Calculate" type="submit">
 </form>
+</div>
+<div id="resultBox">
+    <p class="hide">Result: <span id="resultValueId"></span></p>
+</div>
 
+<script src='main.js'></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ import lombok.Value;
  * An valid object representing a distance (the numeric value will always be positive and the unit of measurement will be defined)
  */
 @Value
-class Distance {
+public class Distance {
     private double value;
     private Unit unit;
 
