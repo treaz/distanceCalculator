@@ -11,11 +11,17 @@
             var resultDiv = document.getElementById("resultBox");
             resultDiv.classList.remove("hidden");
             var resultValueBox = document.getElementById("resultValueId");
-            resultValueBox.innerHTML = JSON.parse(event.currentTarget.responseText).value;
+            if (event.currentTarget.status === 200){
+                resultValueBox.innerHTML = JSON.parse(event.currentTarget.responseText).value;
+            } else if (event.currentTarget.status === 500){
+                resultValueBox.innerHTML = JSON.parse(event.currentTarget.responseText).message;
+            }
         });
 
         // Define what happens in case of error
         XHR.addEventListener("error", function(event) {
+        console.log("boom")
+        console.log(event)
           alert('Oops! Something went wrong.');
         });
 

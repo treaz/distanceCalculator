@@ -30,6 +30,9 @@ public class CalculatorController {
         return calculator.calculateSum(new Distance(d1, d1unit), new Distance(d2, d2unit), resultUnit);
     }
 
+//    TODO I would like to add a generic exception handler so I can throw to the frontend all these exceptions that can get thrown by the backend
+//    I don't want to throw the stack traces to the frontend
+
     @InitBinder
     private void initBinder(final WebDataBinder webdataBinder) {
         webdataBinder.registerCustomEditor(Unit.class, new UnitConverter());
